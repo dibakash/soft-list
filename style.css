@@ -14,8 +14,8 @@ body {
   background: linear-gradient(lightpink, pink);
 }
 header {
-  color: cadetblue;
-  text-shadow: rgba(169, 169, 169, 0.507) 1px 3px 0.01em;
+  color: #335758;
+  text-shadow: #46374250 3px 3px 0.01em;
   font-size: 1.5em;
   text-align: center;
 }
