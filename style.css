@@ -28,8 +28,8 @@ header {
   padding: 1em;
   place-items: center;
   border-radius: 1em;
-  box-shadow: cadetblue 3px 3px 3px;
-  background: #07f8f9;
+  box-shadow: #736666 3px 3px 3px;
+  background: #736666;
   position: relative;
   align-self: start;
 }
