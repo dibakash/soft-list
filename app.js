@@ -1,10 +1,9 @@
 //define existing in-use dom elements
-
 let shoppingList = {
   container: document.querySelector(".container"),
   cart: document.querySelector(".cart"),
   itemInput: document.querySelector("#itemName-input"),
-  addButton: document.querySelector(".add")
+  addButton: document.querySelector(".add"),
 };
 // defining varying elements
 let slElements = {
@@ -12,10 +11,10 @@ let slElements = {
   itemsWrap: document.querySelector(".items-wrapper"),
   items: document.querySelector(".items"),
   itemName: document.querySelector(".itemName"),
-  closeButton: document.querySelector(".close-button")
+  closeButton: document.querySelector(".close-button"),
 };
 
-shoppingList.addButton.addEventListener("click", e => {
+shoppingList.addButton.addEventListener("click", (e) => {
   e.preventDefault();
   changeItems.listItems();
 });
@@ -24,7 +23,6 @@ shoppingList.addButton.addEventListener("click", e => {
 let changeItems = {
   count: 0,
   deleteAllButton() {
-    // f start
     if (
       shoppingList.cart.children.length !== 0 &&
       slElements.itemsWrap.children.length === 1
@@ -55,11 +53,10 @@ let changeItems = {
       this.count = 0;
       console.log("4th block");
     }
-
-    //f end
   },
+
   ItemsWrapper() {
-    if (slElements.itemsWrap === null) {
+    if (!slElements.itemsWrap) {
       let itemsWrap = document.createElement("ul");
       itemsWrap.classList.add("items-wrapper");
       shoppingList.cart.appendChild(itemsWrap);
@@ -89,7 +86,7 @@ let changeItems = {
       itemName.appendChild(text);
       items.appendChild(closeButton);
       this.ItemsWrapper();
-      slElements.itemsWrap.appendChild(items);
+      slElements.itemsWrap.append(items);
     }
     itemName.addEventListener("click", () => {
       itemName.classList.toggle("full");
@@ -100,5 +97,5 @@ let changeItems = {
       this.ItemsWrapper();
       this.deleteAllButton();
     });
-  }
+  },
 };

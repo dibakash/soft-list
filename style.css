@@ -28,8 +28,8 @@ header {
   padding: 1em;
   place-items: center;
   border-radius: 1em;
-  box-shadow: #736666 3px 3px 3px;
-  background: #736666;
+  box-shadow: #6b6969 3px 3px 3px;
+  background: #5f9ea0;
   position: relative;
   align-self: start;
 }
@@ -39,7 +39,7 @@ header {
   min-width: 50%;
   display: flex;
   padding: 5px;
-  box-shadow: #363636 3px 3px 0.3em;
+  box-shadow: #6b6969 3px 3px 0.3em;
   border-radius: 3px;
   background-color: bisque;
   position: relative;
@@ -64,11 +64,13 @@ header {
   margin-left: 0.15em;
 }
 .clicks {
-  background-color: cadetblue;
+  background-color: #5f9ea0;
   color: aliceblue;
   flex-basis: 100%;
   min-width: 2rem;
   margin-left: 0.15em;
+  margin-right: 0.15em;
+  padding: 0 0.5rem;
 }
 .clicks:active {
   transform: scale(0.9);
@@ -92,69 +94,63 @@ header {
   width: 90%;
   align-self: start;
   border-radius: 0.3em;
-  box-shadow: #363636 3px 3px 0.3em;
+  box-shadow: #6b6969 3px 3px 0.3em;
   background-color: bisque;
 }
 
 .items {
   border-radius: 6px;
   display: flex;
+  justify-content: space-between;
 }
 .itemName {
   background-color: #ffffff;
-  flex-basis: 85%;
   padding: 0 1rem 0 1rem;
-  transition: 1s;
+  transition: 300ms;
+  box-sizing: border-box;
+  min-width: 89%;
 }
 
-.close-button {
-  color: white;
-  flex-basis: 15%;
-  background-color: cadetblue;
-  display: flex;
-  justify-content: center;
-  min-width: 4rem;
+.itemName.full {
+  transition: 300ms;
+  min-width: 100%;
 }
-.close-button:after {
-  content: "X";
-  border-radius: 50%;
-}
-.close-button:active {
-  transform: scale(0.9);
-}
-
 .items a {
-  box-shadow: #363636 3px 3px 0.3em;
+  box-shadow: #6b6969 3px 3px 0.3em;
   border-radius: 3px;
   height: 30px;
   text-decoration: none;
   display: flex;
   align-content: center;
   align-items: center;
-  margin-left: 0.3em;
 }
-
+.close-button {
+  transition: 300ms ease;
+  display: flex;
+  color: white;
+  background-color: cadetblue;
+  justify-content: center;
+  min-width: 10%;
+}
+.close-button:after {
+  content: "X";
+}
 .close-button.hide {
-  transition: 1s ease;
-  flex-basis: 0% !important;
+  transition: 300ms ease;
   transform-origin: right;
-  margin: 0 !important;
-  position: absolute;
-  min-width: 0rem;
-  z-index: -3;
+  min-width: 0;
 }
 .close-button.hide:after {
-  /* display: none !important; */
   content: "";
 }
-.full {
-  flex-basis: 100% !important;
-  transition: 1s;
+.close-button:active {
+  transform: scale(0.9);
 }
+
 .deleteAll {
   border-radius: 6px;
   padding: 1em;
-  background-color: cadetblue;
+  background-color: rgb(184, 77, 100);
   box-shadow: #363636 3px 3px 0.3em;
   color: aliceblue;
   border: none;
