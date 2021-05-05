@@ -6,19 +6,21 @@
 
     <link rel="stylesheet" href="style.css" />
     <title>Shopping list by - Digiattract</title>
+    <script src="app2.js"></script>
   </head>
   <body>
     <header>
-      <h1 class="title">Cool editable List by Dibakash</h1>
+      <h1 class="title"></h1>
     </header>
     <main>
       <div class="container">
-        <form method="get" class="itemForm">
+        <form method="get" class="itemForm" autocomplete="off" hidden>
           <input
             type="text"
             name="a"
-            id="itemName-input"
+            id="entry"
             placeholder="type your items here"
+            autofocus
           />
           <div>
             <input type="submit" value="add" class="add clicks" />
@@ -26,18 +28,19 @@
           </div>
         </form>
 
-        <div class="cart">
-          <!-- <ul class="items-wrapper">
-            <li class="items">
-              <a href="" class="itemName">a</a>
-              <a href="" class="close-button"></a>
-            </li>
-          </ul> -->
-        </div>
-        <!-- <button type="reset" class="deleteAll">Delete All</button> -->
+        <ul class="cart">
+          <li class="listItems">
+            <a href="" class="itemName">a</a>
+            <a href="" class="closeButton"></a>
+          </li>
+          <li class="listItems">
+            <a href="" class="itemName">b</a>
+            <a href="" class="closeButton"></a>
+          </li>
+        </ul>
+        <a href="" class="deleteAll">Delete All</a>
       </div>
     </main>
     <footer></footer>
-    <script src="app.js"></script>
   </body>
 </html>

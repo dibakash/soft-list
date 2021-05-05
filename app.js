@@ -34,11 +34,11 @@ let changeItems = {
     } else if (shoppingList.cart.children.length !== 0 && this.count === 0) {
       console.log("2 block");
       let deleteAllButton = document.createElement("button");
-      let content = document.createTextNode("Delete All");
       deleteAllButton.classList.add("deleteAll");
-      deleteAllButton.appendChild(content);
+      deleteAllButton.appendChild(document.createTextNode("Delete All"));
+
       shoppingList.container.appendChild(deleteAllButton);
-      slElements.deleteAllButton = deleteAllButton;
+
       deleteAllButton.addEventListener("click", () => {
         deleteAllButton.remove();
         slElements.itemsWrap.remove();
