@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
           if (!item) return;
           item.remove();
           //   work on delete button
+          // today
         }
       }
     }
