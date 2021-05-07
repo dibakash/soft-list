@@ -69,7 +69,7 @@ header {
   color: var(--txt);
 }
 .itemForm input[type="text"]::placeholder {
-  color: rgb(219, 166, 150);
+  color: rgb(148, 124, 116);
 }
 
 #entry {
