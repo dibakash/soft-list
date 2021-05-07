@@ -29,10 +29,8 @@ let changeItems = {
     ) {
       if (this.count === 1) {
         slElements.deleteAllButton.remove();
-        console.log("1 block");
       }
     } else if (shoppingList.cart.children.length !== 0 && this.count === 0) {
-      console.log("2 block");
       let deleteAllButton = document.createElement("button");
       deleteAllButton.classList.add("deleteAll");
       deleteAllButton.appendChild(document.createTextNode("Delete All"));
@@ -47,11 +45,9 @@ let changeItems = {
       });
       this.count = 1;
     } else if (shoppingList.cart.children.length === 0 && this.count === 0) {
-      console.log("3rd block");
     } else if (shoppingList.cart.children.length === 0 && this.count === 1) {
       slElements.deleteAllButton.remove();
       this.count = 0;
-      console.log("4th block");
     }
   },
 

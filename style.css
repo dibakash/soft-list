@@ -1,8 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  --prm: #c36060;
+  --prm: #d8baba;
   --txt: #523434;
+  --light: #ffdddd;
+  --dark: #af9797;
+  --g1: #e7c7c7;
+  --g2: #c2a7a7;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-decoration: none;
@@ -36,8 +40,8 @@ header {
   padding: 1em;
   place-items: center;
   border-radius: 1em;
-  background: linear-gradient(145deg, #d16767, #b05656);
-  box-shadow: 0.5em 0.5em 1.2em #904747b0, -0.5em -0.5em 1.2em #f67979b0;
+  background: linear-gradient(145deg, var(--g1), var(--g2));
+  box-shadow: 0.5em 0.5em 1.2em var(--dark), -0.5em -0.5em 1.2em var(--light);
   align-self: start;
   box-sizing: border-box;
 }
@@ -51,7 +55,7 @@ header {
   padding: 1em;
   border-radius: 5px;
   background: var(--prm);
-  box-shadow: 1px 1px 2px #aa5454, -1px -1px 2px #dc6c6c;
+  box-shadow: 1px 1px 2px var(--dark), -1px -1px 2px var(--light);
   position: relative;
   align-self: start;
 }
@@ -60,8 +64,8 @@ header {
   border: none;
   border-radius: 3px;
   height: 30px;
-  background-color: #f8cece;
-  box-shadow: inset 2px 2px 2px #a65252, inset -2px -2px 2px #e06e6e;
+  background-color: var(--prm);
+  box-shadow: inset 2px 2px 2px var(--dark), inset -2px -2px 2px var(--light);
   color: var(--txt);
 }
 .itemForm input[type="text"]::placeholder {
@@ -82,8 +86,8 @@ header {
 .clicks,
 .closeButton {
   border-radius: 8px;
-  background: linear-gradient(145deg, #d16767, #b05656);
-  box-shadow: 4px 4px 5px #a65252, -4px -4px 5px #e06e6e;
+  background: linear-gradient(145deg, var(--g1), var(--g2));
+  box-shadow: 4px 4px 5px var(--dark), -4px -4px 5px var(--light);
   flex-basis: 100%;
   min-width: 1rem;
   padding: 0 0.5rem;
@@ -96,7 +100,7 @@ header {
 .closeButton:active {
   border-radius: 8px;
   background: var(--prm);
-  box-shadow: inset 4px 4px 5px #a65252, inset -4px -4px 5px #e06e6e;
+  box-shadow: inset 4px 4px 5px var(--dark), inset -4px -4px 5px var(--light);
 }
 
 .cart {
@@ -105,13 +109,16 @@ header {
   justify-items: center;
   align-self: start;
   gap: 1em;
-  /* height: 100%; */
   border-radius: 5px;
   background: var(--prm);
-  box-shadow: 1px 1px 2px #aa5454, -1px -1px 2px #dc6c6c;
+  box-shadow: 1px 1px 2px var(--dark), -1px -1px 2px var(--light);
   position: relative;
   padding: 0.5em;
   box-sizing: border-box;
+}
+.cart.empty {
+  padding: 0;
+  display: none;
 }
 
 .listItems {
@@ -123,7 +130,7 @@ header {
   display: flex;
   justify-content: space-between;
   background: var(--prm);
-  box-shadow: 1px 1px 2px #aa5454, -1px -1px 2px #dc6c6c;
+  box-shadow: 1px 1px 2px var(--dark), -1px -1px 2px var(--light);
 }
 
 .itemName {
@@ -171,17 +178,17 @@ header {
   content: "";
 }
 
-.deleteAll {
+#deleteAll {
   padding: 1em;
   border-radius: 10px;
-  background: linear-gradient(145deg, #d16767, #b05656);
-  box-shadow: 8px 8px 20px #904747, -6px -3px 20px #f67979;
+  background: linear-gradient(145deg, var(--g1), var(--g2));
+  box-shadow: 8px 8px 20px var(--dark), -6px -3px 20px var(--light);
   border: none;
 }
 
-.deleteAll:active {
+#deleteAll:active {
   background: var(--prm);
-  box-shadow: inset 4px 4px 5px #a65252, inset -4px -4px 5px #e06e6e;
+  box-shadow: inset 4px 4px 5px var(--dark), inset -4px -4px 5px var(--light);
 }
 
 input:focus-visible,

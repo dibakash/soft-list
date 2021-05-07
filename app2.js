@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   let container = document.querySelector(".container");
 
-  function entryValue(elementValue) {
-    if (!elementValue) return;
-    return elementValue;
-  }
-
   class listItem {
     constructor(val) {
       if (!val) {
@@ -31,14 +26,24 @@ document.addEventListener("DOMContentLoaded", (e) => {
   container.addEventListener("click", (e) => {
     let addButton = document.querySelector(".add");
     let cart = document.querySelector(".cart");
+    let deleteAll = document.querySelector("#deleteAll");
 
     if (e.target === addButton) {
       e.preventDefault();
-      let entry = entryValue(document.querySelector("#entry"));
+      let entry = document.querySelector("#entry");
       if (!entry.value) return;
       let newItem = new listItem(entry.value);
+      if (!cart) {
+        cart = document.createElement("ul");
+        cart.classList.add("cart");
+        container.append(cart);
+      }
+      newItem.itemName.classList.add("full");
       cart.append(newItem.item);
       entry.value = "";
+      if (cart.classList.contains("empty")) {
+        cart.classList.remove("empty");
+      }
     }
 
     let closeButtons = document.querySelectorAll(".closeButton");
@@ -47,14 +52,31 @@ document.addEventListener("DOMContentLoaded", (e) => {
       for (button of closeButtons) {
         if (e.target === button) {
           e.preventDefault();
-          let close = e.target;
           let item = e.target.closest("li");
-          if (!item) return;
           item.remove();
-          //   work on delete button
-          // today
+          if (!deleteAll) {
+            deleteAll = document.createElement("a");
+            deleteAll.innerHTML = "deleteAll";
+            deleteAll.setAttribute("id", "deleteAll");
+            container.append(deleteAll);
+          }
+          let itemCount = cart.childElementCount;
+          if (itemCount === 0) {
+            cart.classList.add("empty");
+          }
+          if (itemCount >= 2) {
+            deleteAll.hidden = false;
+          } else {
+            deleteAll.hidden = true;
+          }
         }
       }
+    }
+
+    if (e.target === deleteAll) {
+      e.preventDefault();
+      deleteAll.remove();
+      cart.remove();
     }
 
     let itemNames = document.querySelectorAll(".itemName");
