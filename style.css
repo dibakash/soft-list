@@ -26,10 +26,23 @@ body {
   background: var(--prm);
   box-sizing: border-box;
 }
-header {
+header,
+.title {
   color: var(--prmLt);
   font-size: 1.5em;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  color: #f1e0e0;
+}
+.title::after {
+  content: "By Dibakash";
+  font-family: cursive;
+  font-size: 1.5rem !important;
+  justify-self: right;
+}
+main {
+  align-self: start;
 }
 .container {
   width: 30vw;
@@ -41,7 +54,7 @@ header {
   place-items: center;
   border-radius: 1em;
   background: linear-gradient(145deg, var(--g1), var(--g2));
-  box-shadow: 0.5em 0.5em 1.2em var(--dark), -0.5em -0.5em 1.2em var(--light);
+  box-shadow: 0.5em 0.5em 1em var(--dark), -0.5em -0.5em 1.2em var(--light);
   align-self: start;
   box-sizing: border-box;
 }
@@ -182,7 +195,7 @@ header {
   padding: 1em;
   border-radius: 10px;
   background: linear-gradient(145deg, var(--g1), var(--g2));
-  box-shadow: 8px 8px 20px var(--dark), -6px -3px 20px var(--light);
+  box-shadow: 8px 8px 10px var(--dark), -6px -3px 15px var(--light);
   border: none;
 }
 
