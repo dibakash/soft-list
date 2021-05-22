@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   --prm: #d8baba;
+  --prmLt: #f1e0e0;
   --txt: #523434;
   --light: #ffdddd;
   --dark: #af9797;
@@ -33,13 +34,18 @@ header,
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
-  color: #f1e0e0;
 }
+
 .title::after {
   content: "By Dibakash";
   font-family: cursive;
   font-size: 1.5rem !important;
   justify-self: right;
+}
+
+footer p {
+  color: var(--prmLt);
+  font-size: 1.5em;
 }
 main {
   align-self: start;
