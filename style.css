@@ -36,11 +36,11 @@ header,
   display: grid;
 }
 
-.title::after {
-  content: "By Dibakash";
+header > h1 > span {
   font-family: cursive;
   font-size: 1.5rem !important;
   justify-self: right;
+  color: var(--prmLt);
 }
 
 footer p {
