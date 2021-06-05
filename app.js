@@ -1,4 +1,4 @@
-// refactor it
+// refactor this version
 document.addEventListener("DOMContentLoaded", (e) => {
   let container = document.querySelector(".container");
 
