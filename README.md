@@ -2,5 +2,5 @@
 
 An editable shopping list
 
-minor updates required:
+updates recheck:
 code refactoring required
