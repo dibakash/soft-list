@@ -1,4 +1,4 @@
-// This is a backup version of app2.js.
+// This is a backup version of app.js.
 // Refactor is required
 document.addEventListener("DOMContentLoaded", (e) => {
   let container = document.querySelector(".container");
