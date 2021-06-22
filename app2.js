@@ -1,5 +1,5 @@
 // This is an alternative version of app.js.
-// Refactor can be explored
+// Refactoring the code can be explored
 document.addEventListener("DOMContentLoaded", (e) => {
   let container = document.querySelector(".container");
 
